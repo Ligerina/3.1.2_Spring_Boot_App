@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>UserInfo</title>
+</head>
+
+<body>
+
+<h1>Adding/Updating User</h1>
+
+<form action="#" th:action="@{/addOrUpdate}" th:object="${User}" >
+
+  <input type="hidden" th:field="*{id}" readonly="readonly">
+
+  <label for="name">Name </label>
+  <input type="text" th:field="*{name}" id="name"/>
+  <br>
+
+  <label for="surname">surname </label>
+  <input type="text" th:field="*{surname}" id="surname"/>
+  <br>
+
+  <label for="department">department </label>
+  <input type="text" th:field="*{department}" id="department"/>
+  <br>
+
+  <label for="location">location </label>
+  <input type="text" th:field="*{location}" id="location"/>
+  <br>
+
+  <input type="submit" value="Add/Update User">
+  </form>
+
+</body>
+</html>
